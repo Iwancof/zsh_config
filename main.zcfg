@@ -1,0 +1,66 @@
+# The following lines were added by compinstall
+
+
+export ZSH_WORDSPACE_ROOT=$HOME/.config/zsh
+
+# EXPORTS
+source $ZSH_WORDSPACE_ROOT/variables.zcfg
+
+zstyle ':completion:*' completer _expand _complete _ignored # _approximate
+zstyle :compinstall filename '/home/iwancof/.zshrc'
+
+autoload -U add-zsh-hook
+autoload -Uz compinit && compinit
+
+# HISTORY
+HISTFILE=~iwancof/.zsh_history
+HISTSIZE=10000000000
+SAVEHIST=10000000000
+
+# EMOJI
+source $ZSH_WORDSPACE_ROOT/emoji-cli/emoji-cli.zsh
+
+# ALIAS
+source $ZSH_WORDSPACE_ROOT/aliases.zcfg
+
+# FZF
+source $ZSH_WORDSPACE_ROOT/fzf.zcfg
+
+# PMY
+source $ZSH_WORDSPACE_ROOT/pmy.zcfg
+
+# PROMPT
+source $ZSH_WORDSPACE_ROOT/prompt.zcfg
+
+# SUGGES
+source $ZSH_WORDSPACE_ROOT/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# NIX
+source /home/iwancof/.nix-profile/etc/profile.d/nix.sh
+
+
+# EXTRA COMPLETION
+# source $ZSH_WORDSPACE_ROOT/zsh-completion/zsh-completions.plugin.zsh
+
+# Rye
+source "$HOME/.rye/env"
+
+if [[ -z "$TMUX" ]] ;then
+    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then # if not available create a new one
+        tmux new-session
+        exit
+    else
+        tmux attach-session -t "$ID" # if available attach to it
+        exit
+    fi
+fi
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# bindkey "^I" menu-expand-or-complete
+# fpath=(${ZSH_WORDSPACE_ROOT}/zsh-romaji-complete $fpath)
+# . ${ZSH_WORDSPACE_ROOT}/zsh-romaji-complete/zsh-romaji-complete.plugin.zsh

@@ -1,0 +1,57 @@
+# export LANG=ja_JP.UTF-8
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--height 30% --border'
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+export PATH="/home/`whoami`/.pyenv/shims:${PATH}"
+export PATH="/usr/local/snort/bin:${PATH}"
+export PATH="/home/iwancof/.local/share/gem/ruby/3.0.0/bin:${PATH}"
+export PATH="/home/iwancof/WorkSpace/Pentest/Ukraine/arm-uclibc-3.4.6/bin:${PATH}"
+export PATH="/home/iwancof/WorkSpace/Pentest/Ukraine/cross-compiler-armv4tl/bin:${PATH}"
+export PATH="/usr/sde-external-9.0.0-2021-11-07-lin:${PATH}"
+export PATH="/home/iwancof/WorkSpace/CTF/browser/depot_tools:${PATH}"
+# export PATH="/opt/cuda/bin":${PATH}
+# export PATH="/home/iwancof/WorkSpace/Rust/prusti":${PATH}
+export PATH=/home/iwancof/bin:$PATH
+export PATH="/home/iwancof/WorkSpace/Rust/prusti-dev/target/release":${PATH}
+export PATH="/home/iwancof/.npm-global/bin":${PATH}
+export PATH="/home/iwancof/utils/":${PATH}
+export PATH="/home/iwancof/.cargo/bin/":${PATH}
+export PATH=$PATH:~`whoami`/.local/bin
+export PATH=$PATH:/opt/intel/oneapi/compiler/latest/linux/pkg_bin
+export PATH=$PATH:/opt/intel/oneapi/mpi/2021.6.0/bin
+export PATH=$PATH:/home/iwancof/WorkSpace/CTF/competitions/hitcon/hole/depot_tools
+export PATH=$PATH:/home/iwancof/matlab/bin
+export PATH=$PATH:/home/iwancof/.ghcup/bin
+export TF_CPP_MIN_LOG_LEVEL=2
+
+export CARGO_REGISTRY_TOKEN=ciozBUKZXOe6Xtf4c2yUm86qEaE6gyaXU3j
+
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export TERM=xterm-256color
+export TERMINFO=/usr/share/terminfo
+export GPG_TTY=$(tty)
+
+export JAVA_HOME=/usr/lib/jvm/default-runtime
+export LD_LIBRARY_PATH=${JAVA_HOME}/lib/server
+
+# export CROSS_ROOTLESS_CONTAINER_ENGINE=rootless
+export CROSS_CONTAINER_ENGINE=podman
+
+export LD_LIBRARY_PATH=/usr/lib/jvm/default-runtime/lib/server:/usr/local/lib:/home/iwancof/.rustup/toolchains/nightly-2022-08-30-x86_64-unknown-linux-gnu/lib/:/home/iwancof/.rustup/toolchains/nightly-2022-08-30-x86_64-unknown-linux-gnu/lib/:/home/iwancof/.rustup/toolchains/nightly-2022-08-30-x86_64-unknown-linux-gnu/lib/
+
+export EDITOR=nvim
+export GPT_SECRET_API_KEY=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
+export CHAT_GPT_KEY="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"
+export OPENAI_API_KEY=$CHAT_GPT_KEY
+
+
+# export SCCACHE_REDIS=redis://localhost:6379/
+# RUSTC_WRAPPER=`which sccache` cargo build
+export RUSTC_WRAPPER=$(which sccache)
+
+# export Z3_EXE=/home/iwancof/WorkSpace/Rust/prusti-dev/viper_tools/z3/bin/z3
+# export BOOGIE_EXE=/home/iwancof/WorkSpace/Rust/prusti-dev/viper_tools/boogie/Binaries/Boogie
+
+source /etc/profile.d/arm-linux-musleabihf-cross.sh
+

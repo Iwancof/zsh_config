@@ -1,0 +1,9 @@
+[submodule "emoji-cli"]
+	path = emoji-cli
+	url = git@github.com:babarot/emoji-cli.git
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "pmy"]
+	path = pmy
+	url = git@github.com:relastle/pmy.git
